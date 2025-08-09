@@ -12,7 +12,7 @@ namespace System
 {
 	void CollisionSystem::Update(float dt)
 	{
-		unsigned int count = components_.size();
+		size_t count = components_.size();
 		for (unsigned int i = 0; i < count; i++)
 		{
 			for (unsigned int j = i + 1; j < count; j++)

@@ -87,6 +87,8 @@ struct GLFWGamepad : public InputDevice
 			return InputKey::GAMEPAD_DPAD_DOWN;
 		case GLFW_GAMEPAD_BUTTON_DPAD_LEFT:
 			return InputKey::GAMEPAD_DPAD_LEFT;
+		default:
+			return InputKey::INVALID;
 		}
 	}
 
@@ -106,6 +108,8 @@ struct GLFWGamepad : public InputDevice
 			return InputKey::GAMEPAD_LEFT_TRIGGER;
 		case GLFW_GAMEPAD_AXIS_RIGHT_TRIGGER:
 			return InputKey::GAMEPAD_RIGHT_TRIGGER;
+		default:
+			return InputKey::INVALID;
 		}
 	}
 };

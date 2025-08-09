@@ -177,7 +177,6 @@
   <ItemGroup>
     <ClCompile Include="Container.cpp" />
     <ClCompile Include="Core.cpp" />
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ECSFactory.cpp" />
     <ClCompile Include="EventManager.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />

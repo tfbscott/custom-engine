@@ -8,7 +8,7 @@ namespace Component
 
 namespace Container
 {
-	class _ComponentList;
+	struct _ComponentList;
 	typedef _ComponentList* ComponentList;
 
 

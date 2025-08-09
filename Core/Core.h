@@ -2,7 +2,7 @@
 
 namespace Container
 {
-	class _ComponentList;
+	struct _ComponentList;
 }
 
 namespace Object
@@ -59,7 +59,7 @@ namespace Component
 
 		friend class Object::GameObject;
 		friend class System::BaseSystem;
-		friend class Container::_ComponentList;
+		friend struct Container::_ComponentList;
 
 	private:
 		//These values are used to speed up component deletion

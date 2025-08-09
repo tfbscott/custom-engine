@@ -174,7 +174,6 @@
   <ItemGroup>
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionSystem.cpp" />
-    <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="Kinematics.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

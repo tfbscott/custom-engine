@@ -28,8 +28,6 @@ namespace Engine
 
 	void Renderer::Initalize()
 	{
-		
-
 		//Initalize GLFW
 		glfwInit();
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -166,7 +164,7 @@ namespace Engine
 
 	void Renderer::Update()
 	{
-		float currentFrame = glfwGetTime();
+		double currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
@@ -208,7 +206,9 @@ namespace Engine
 
 			cameras_[i]->GetDisplayData(xP, yP, widthP, heightP);
 
-			glViewport(width * xP, (height * yP), width * widthP, height * heightP);
+			int viewportX = int(width * xP), viewportY = int(height * yP), viewportWidth = int(width * widthP), viewportHeight = int(height * heightP);
+
+			glViewport(viewportX, viewportY, viewportWidth, viewportHeight);
 
 			glEnable(GL_DEPTH_TEST);
 
@@ -475,7 +475,7 @@ namespace Engine
 				break;
 			}
 
-			Keyboard->NextState[convert].Value = action;
+			Keyboard->NextState[convert].Value = float(action);
 
 			});
 

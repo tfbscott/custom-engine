@@ -260,13 +260,13 @@ namespace Gamestate
 		
 		Object::GameObject* floor = CreateBox("Floor", 0, -1, 0, 60, 1, 60);
 
-		Object::GameObject* hole = CreateBox("Wall", 0, 1, 0, 10, 4, 10, 0.9, 0.9, 0.9);
+		Object::GameObject* hole = CreateBox("Wall", 0, 1, 0, 10, 4, 10, 0.9f, 0.9f, 0.9f);
 
-		Object::GameObject* northWall = CreateBox("Wall", /*|*/30, 1, 0, /*|*/ 1, 4, 60,/*|*/ 0.9, 0.9, 0.9);
-		Object::GameObject* southWall = CreateBox("Wall", /*|*/-30, 1, 0,/*|*/ 1, 4, 60,/*|*/ 0.9, 0.9, 0.9);
+		Object::GameObject* northWall = CreateBox("Wall", /*|*/30, 1, 0, /*|*/ 1, 4, 60,/*|*/ 0.9f, 0.9f, 0.9f);
+		Object::GameObject* southWall = CreateBox("Wall", /*|*/-30, 1, 0,/*|*/ 1, 4, 60,/*|*/ 0.9f, 0.9f, 0.9f);
 
-		Object::GameObject* eastWall = CreateBox("Wall", /*|*/0, 1, 30, /*|*/ 60, 4, 1,/*|*/ 0.9, 0.9, 0.9);
-		Object::GameObject* westWall = CreateBox("Wall", /*|*/0, 1, -30,/*|*/ 60, 4, 1,/*|*/ 0.9, 0.9, 0.9);
+		Object::GameObject* eastWall = CreateBox("Wall", /*|*/0, 1, 30, /*|*/ 60, 4, 1,/*|*/ 0.9f, 0.9f, 0.9f);
+		Object::GameObject* westWall = CreateBox("Wall", /*|*/0, 1, -30,/*|*/ 60, 4, 1,/*|*/ 0.9f, 0.9f, 0.9f);
 		
 
 
