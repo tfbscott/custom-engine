@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "Core.h"
 #include "Transform.h"
 #include "glm/glm.hpp"
@@ -23,33 +22,33 @@ namespace Component
 	{
 	public:
 
-		CE_RENDEROGL_API RenderComponent();
+		RenderComponent();
 
-		CE_RENDEROGL_API ~RenderComponent();
+		~RenderComponent();
 
-		CE_RENDEROGL_API void Update(float dt);
+		void Update(float dt);
 
 		//void MakeVAO();
 
-		CE_RENDEROGL_API void Draw(Graphics::ShaderProgram*);
+		void Draw(Graphics::ShaderProgram*);
 
-		CE_RENDEROGL_API void SetShape(Shape* s);
+		void SetShape(Shape* s);
 
-		CE_RENDEROGL_API void SetTexture(Texture* t);
+		void SetTexture(Texture* t);
 
-		CE_RENDEROGL_API void SetColor(const glm::vec3& c);
+		void SetColor(const glm::vec3& c);
 
-		CE_RENDEROGL_API const glm::vec3& GetColor();
+		const glm::vec3& GetColor();
 
 		//void SetVerticies(float* v, unsigned int c, unsigned int s);
 
 		//unsigned int GetVAO() { return VAOID; }
 
-		CE_RENDEROGL_API  void SetPosition(const glm::mat4& p);
+		void SetPosition(const glm::mat4& p);
 
-		CE_RENDEROGL_API const glm::mat4& GetPosition();
+		 const glm::mat4& GetPosition();
 
-		CE_RENDEROGL_API bool ShouldCameraRender(const Camera* c);
+		bool ShouldCameraRender(const Camera* c);
 
 	private:
 		

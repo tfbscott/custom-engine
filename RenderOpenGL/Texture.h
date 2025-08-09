@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 
 namespace Component
 {
@@ -7,9 +6,9 @@ namespace Component
 	{
 	public:
 
-		CE_RENDEROGL_API Texture();
+		Texture();
 
-		CE_RENDEROGL_API void Read(const char* n, bool flip = false);
+		void Read(const char* n, bool flip = false);
 
 		void BindTexture();
 

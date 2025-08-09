@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "Core.h"
 #include "Collider.h"
 
@@ -15,7 +14,7 @@ namespace System
 		std::list<Object::GameObject*> ignore;
 	};
 
-	class CE_KINELIB_API CollisionSystem : public AssignedSystem<Component::Collider>
+	class CollisionSystem : public AssignedSystem<Component::Collider>
 	{
 	public:
 		//This system will need an overhauled update function

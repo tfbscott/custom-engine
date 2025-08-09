@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "glm/glm.hpp"
 #include <vector>
 
@@ -10,13 +9,13 @@ namespace Component
 	public:
 		void Draw();
 
-		CE_RENDEROGL_API void MakeVAO(bool ebo = true);
+		void MakeVAO(bool ebo = true);
 
 		//CE_RENDEROGL_API void SetVerticies(float* v, unsigned int c, unsigned int s);
 
-		CE_RENDEROGL_API void SetShape(const std::vector<glm::vec3>& v, const std::vector<glm::vec3>& n, const std::vector<glm::ivec3>& i);
+		void SetShape(const std::vector<glm::vec3>& v, const std::vector<glm::vec3>& n, const std::vector<glm::ivec3>& i);
 
-		CE_RENDEROGL_API void SetTextureCords(const std::vector<glm::vec2>& t);
+		void SetTextureCords(const std::vector<glm::vec2>& t);
 
 	protected:
 		unsigned int VAOID;

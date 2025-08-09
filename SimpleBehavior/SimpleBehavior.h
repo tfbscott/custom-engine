@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "Core.h"
 #include "GameObject.h"
 #include "BaseInputManager.h"
@@ -12,7 +11,7 @@ namespace System
 
 namespace Component
 {
-	class CE_BEHLIB_API SimpleBehavior : public BaseComponent
+	class SimpleBehavior : public BaseComponent
 	{
 		friend class System::SimpleBehaviorSystem;
 	public:

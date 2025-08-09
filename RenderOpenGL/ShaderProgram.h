@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 
 namespace Graphics
 {

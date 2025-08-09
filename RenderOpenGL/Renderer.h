@@ -1,6 +1,5 @@
 #pragma once
 
-#include "dlldef.h"
 #include "Core.h"
 #include "InputDevice.h"
 #include "glm/glm.hpp"
@@ -24,7 +23,7 @@ namespace Engine {
 
 	class InputManager;
 
-	class CE_RENDEROGL_API Renderer : public BaseRenderer
+	class Renderer : public BaseRenderer
 	{
 	public:
 		virtual void Initalize();

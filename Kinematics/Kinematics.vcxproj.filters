@@ -24,9 +24,6 @@
     <ClInclude Include="Kinematics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="dlldef.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="KinematicsSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
