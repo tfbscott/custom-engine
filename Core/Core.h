@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 
 namespace Container
 {
@@ -41,7 +40,7 @@ namespace System
 
 namespace Component
 {
-	class CE_CORELIB_API BaseComponent
+	class BaseComponent
 	{
 	public:
 		BaseComponent();
@@ -71,7 +70,7 @@ namespace Component
 
 namespace System
 {
-	class CE_CORELIB_API BaseSystem
+	class BaseSystem
 	{
 	public:
 
@@ -120,7 +119,7 @@ namespace System
 namespace Engine
 {
 
-	class CE_CORELIB_API BaseRenderer
+	class BaseRenderer
 	{
 	public:
 		virtual void Initalize() = 0;
@@ -143,23 +142,23 @@ namespace Engine
 	{
 		friend class ECSFactory;
 	public:
-		CE_CORELIB_API Core();
+		Core();
 
-		CE_CORELIB_API ~Core();
+		~Core();
 
-		CE_CORELIB_API void AddSystem(System::BaseSystem* s, unsigned int thread = 0);
+		void AddSystem(System::BaseSystem* s, unsigned int thread = 0);
 
-		CE_CORELIB_API void SetRenderer(BaseRenderer* r);
+		void SetRenderer(BaseRenderer* r);
 
-		CE_CORELIB_API void SetInputManager(InputManager* i);
+		void SetInputManager(InputManager* i);
 
-		CE_CORELIB_API void Init();
+		void Init();
 
-		CE_CORELIB_API void Run();
+		void Run();
 
-		CE_CORELIB_API void Exit();
+		void Exit();
 
-		CE_CORELIB_API void AddGameState(Gamestate::GameState*);
+		void AddGameState(Gamestate::GameState*);
 
 		template<class S>
 		S* GetSystem()
@@ -191,9 +190,6 @@ namespace Engine
 		std::vector<System::BaseSystem*> systems_;
 
 		std::vector<std::vector<System::BaseSystem*>> threads_;
-
-		
-
 
 		bool isRunning_;
 	};

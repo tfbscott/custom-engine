@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "Core.h"
 #include "GameObject.h"
 
@@ -9,9 +8,9 @@ namespace Engine
 	{
 	public:
 
-		CE_CORELIB_API void SetParent(Core*);
+		void SetParent(Core*);
 
-		CE_CORELIB_API Object::GameObject* CreateGameObject();
+		Object::GameObject* CreateGameObject();
 
 		template<class C>
 		C* CreateComponent()

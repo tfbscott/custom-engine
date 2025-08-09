@@ -5,7 +5,7 @@
 
 namespace Component
 {
-	class CE_CORELIB_API Transform : public BaseComponent
+	class Transform : public BaseComponent
 	{
 	public:
 		 Transform() : transform(0.0f), position_(1.0f), rotation_(0.0f), scale_(1.0f), dirty(false) {}

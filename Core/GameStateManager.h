@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include <vector>
 #include "Core.h"
 #include "GameObject.h"
@@ -26,7 +25,7 @@ namespace Engine
 
 namespace Gamestate
 {
-	class CE_CORELIB_API GameState
+	class GameState
 	{
 		friend class Engine::GameStateManager;
 	public:
@@ -73,13 +72,13 @@ namespace Engine{
 
 		void Update(float dt);
 
-		CE_CORELIB_API void AddGamestate(Gamestate::GameState*);
+		void AddGamestate(Gamestate::GameState*);
 
 		void SetParent(Core*);
 
-		CE_CORELIB_API void SetNextGameState(int);
+		void SetNextGameState(int);
 
-		CE_CORELIB_API int GetCurrentState() { return current; }
+		int GetCurrentState() { return current; }
 
 	private:
 		int current;

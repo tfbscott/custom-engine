@@ -33,3 +33,6 @@
 
 # VS folder
 .vs/
+
+# Output folders
+*x64/

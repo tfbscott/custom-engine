@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "InputKey.h"
 #include "InputDevice.h"
 #include <list>
@@ -7,6 +6,7 @@
 #include <map>
 #include <unordered_map>
 #include <unordered_set>
+#include <string>
 
 #include <functional>
 
@@ -54,18 +54,18 @@ namespace Engine
 			ActionCallbackFunc Func;
 		};
 
-		CE_CORELIB_API ~InputManager();
+		~InputManager();
 
-		CE_CORELIB_API void RegisterActionCallback(const std::string& actionName, ActionCallback callback);
-		CE_CORELIB_API void RemoveActionCallback(const std::string&, std::string callbackRef);
+		void RegisterActionCallback(const std::string& actionName, ActionCallback callback);
+		void RemoveActionCallback(const std::string&, std::string callbackRef);
 
-		CE_CORELIB_API void MapInputToAction(InputKey key, const std::string& action);
-		CE_CORELIB_API void UnmapInputFromAction(InputKey key, const std::string& action);
+		void MapInputToAction(InputKey key, const std::string& action);
+		void UnmapInputFromAction(InputKey key, const std::string& action);
 
-		CE_CORELIB_API void RegisterDevice(InputDevice* device);
-		CE_CORELIB_API void RemoveDevice(InputDeviceType type, int index);
+		void RegisterDevice(InputDevice* device);
+		void RemoveDevice(InputDeviceType type, int index);
 
-		CE_CORELIB_API InputDevice* GetDeviceByIndex(int i) { return devices[i]; }
+		InputDevice* GetDeviceByIndex(int i) { return devices[i]; }
 
 		//This function will get new devices states and compare them to old states
 		void ProcessInput();

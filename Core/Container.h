@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 
 //Since we are using the Hourglass method, the code here will be C style... YAY
 namespace Component

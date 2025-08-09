@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "EventManager.h"
 //NOT DLL SAFE, REPLACE LATER
 #include <vector>
@@ -25,14 +24,14 @@ namespace Object
 	{
 	public:
 
-		CE_CORELIB_API GameObject();
+		GameObject();
 
-		CE_CORELIB_API ~GameObject();
+		~GameObject();
 
-		CE_CORELIB_API void AddComponent(Component::BaseComponent*);
+		void AddComponent(Component::BaseComponent*);
 
 		//CURRENTLY INDEXED, ADD TEMPLATED GET LATER
-		CE_CORELIB_API Component::BaseComponent* GetComponent(unsigned int index);
+		Component::BaseComponent* GetComponent(unsigned int index);
 
 		//THIS IS INEFFICIENT AND SLOW
 		//NEED A WAY TO SPEED UP
@@ -48,7 +47,7 @@ namespace Object
 			return nullptr;
 		}
 
-		CE_CORELIB_API Engine::Core* GetCore() const;
+		Engine::Core* GetCore() const;
 		//Possibly make setcore private, so user doesn't mess with it
 		//Currently throws link errors on purpose
 		void SetCore(Engine::Core* c);
@@ -65,13 +64,13 @@ namespace Object
 			eventManager_.FireCallback<E>(e);
 		}
 
-		CE_CORELIB_API void SetIdentifier(std::string s);
+		void SetIdentifier(std::string s);
 
-		CE_CORELIB_API const std::string& GetIdentifier() const;
+		const std::string& GetIdentifier() const;
 
 		bool IsDestroyed() const;
 
-		CE_CORELIB_API void Destroy();
+		void Destroy();
 
 		void DeleteComponents();
 

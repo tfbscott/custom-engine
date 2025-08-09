@@ -1,5 +1,6 @@
 #include "pch.h"
 #include "BaseInputManager.h"
+#include <string>
 
 namespace Engine
 {

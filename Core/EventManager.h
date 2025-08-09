@@ -1,5 +1,4 @@
 #pragma once
-#include "dlldef.h"
 #include "Events.h"
 #include <list>
 #include <unordered_map>
@@ -41,9 +40,9 @@ namespace Event
 	class EventManager
 	{
 	public:
-		CE_CORELIB_API EventManager();
+		EventManager();
 
-		CE_CORELIB_API ~EventManager();
+		~EventManager();
 
 		template<class E, class T>
 		void SetCallback(T* i, void (T::* callbackFunc)(E*))
