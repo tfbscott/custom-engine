@@ -19,6 +19,9 @@
     <Filter Include="Behaviors">
       <UniqueIdentifier>{681d55a4-3d0d-4edc-b947-136a28bc923d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{d402ccfa-daaa-4896-b2d5-619e464cb5fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,6 +48,9 @@
     <ClCompile Include="ShrinkandKill.cpp">
       <Filter>Behaviors</Filter>
     </ClCompile>
+    <ClCompile Include="ReadWriteTools.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelA.h">
@@ -67,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="ShrinkAndKill.h">
       <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadWriteTools.h">
+      <Filter>Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

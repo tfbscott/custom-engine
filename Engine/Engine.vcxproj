@@ -175,6 +175,7 @@
     <ClCompile Include="PlayerBehavior.cpp" />
     <ClCompile Include="ProjectileBehavior.cpp" />
     <ClCompile Include="ShrinkandKill.cpp" />
+    <ClCompile Include="ReadWriteTools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelA.h" />
@@ -183,6 +184,7 @@
     <ClInclude Include="LevelZ.h" />
     <ClInclude Include="PlayerBehavior.h" />
     <ClInclude Include="ProjectileBehavior.h" />
+    <ClInclude Include="ReadWriteTools.h" />
     <ClInclude Include="ShrinkAndKill.h" />
   </ItemGroup>
   <ItemGroup>

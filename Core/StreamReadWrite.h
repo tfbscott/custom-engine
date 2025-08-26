@@ -1,12 +1,13 @@
 #pragma once
 #include <string>
+#include <list>
 
 namespace Tools
 {
-
-	//RETURNS AN ALLOCATED CHUNK OF MEMORY, MUST DELETE
-	char* ReadFile(const char* name);
+	std::string ReadFile(const char* name);
 
 
 	void ConsoleWrite(const char* name);
+
+	std::list<std::string> ReadCSV(const char* name, char delimeter = ' ');
 }

@@ -24,12 +24,13 @@ namespace Graphics
 	void ShaderProgram::CompileShaderFromFile(const char* file, int shaderType)
 	{
 		unsigned int shader = 0;
-		const char* source = Tools::ReadFile(file);
+		std::string source = Tools::ReadFile(file);
 
-		if (source)
+		if (!source.empty())
 		{
 			shader = glCreateShader(shaderType);
-			glShaderSource(shader, 1, &source, NULL);
+			const char* sourceCString = source.c_str();
+			glShaderSource(shader, 1, &sourceCString, NULL);
 			glCompileShader(shader);
 			int success;
 			glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
@@ -46,8 +47,6 @@ namespace Graphics
 			glAttachShader(programID, shader);
 
 			//glDeleteShader(shader);
-
-			delete[] source;
 		}
 	}
 

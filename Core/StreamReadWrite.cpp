@@ -6,7 +6,7 @@
 namespace Tools
 {
 
-	char* ReadFile(const char* name)
+	std::string ReadFile(const char* name)
 	{
 		std::ifstream file;
 		//Open
@@ -17,7 +17,7 @@ namespace Tools
 		{
 			ConsoleWrite("Failed to open file of name");
 			ConsoleWrite(name);
-			return NULL;
+			return std::string();
 		}
 
 		//Seek to end of the file
@@ -35,7 +35,11 @@ namespace Tools
 		//End the data will a null character
 		data[length] = char(0);
 
-		return data;
+		std::string dataString = std::string(data);
+
+		delete[] data;
+
+		return dataString;
 	}
 
 
@@ -43,5 +47,4 @@ namespace Tools
 	{
 		std::cout << name << std::endl;
 	}
-
 }

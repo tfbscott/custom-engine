@@ -7,6 +7,7 @@
 #include "Shape.h"
 #include "Texture.h"
 #include "PlayerBehavior.h"
+#include "ReadWriteTools.h"
 
 #include <fstream>
 
@@ -147,10 +148,13 @@ namespace Gamestate
 		si.push_back(glm::ivec3(0, 1, 3));
 		si.push_back(glm::ivec3(1, 2, 3));
 
-		box = new Component::Shape;
+		box = Tools::ReadShape("Cube.txt");// new Component::Shape;
+
+		
 		//box->SetVerticies(vertices, 36, 5);
 		box->SetShape(cv, cn, ci);
 		box->SetTextureCords(ct);
+		
 		box->MakeVAO();
 
 		square = new Component::Shape;
