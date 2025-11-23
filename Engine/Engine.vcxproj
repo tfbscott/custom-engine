@@ -168,9 +168,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="LevelA.cpp" />
-    <ClCompile Include="LevelB.cpp" />
-    <ClCompile Include="LevelT.cpp" />
-    <ClCompile Include="LevelZ.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PlayerBehavior.cpp" />
     <ClCompile Include="ProjectileBehavior.cpp" />
@@ -179,9 +176,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelA.h" />
-    <ClInclude Include="LevelB.h" />
-    <ClInclude Include="LevelT.h" />
-    <ClInclude Include="LevelZ.h" />
     <ClInclude Include="PlayerBehavior.h" />
     <ClInclude Include="ProjectileBehavior.h" />
     <ClInclude Include="ReadWriteTools.h" />

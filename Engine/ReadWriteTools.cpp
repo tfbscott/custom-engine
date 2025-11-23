@@ -132,6 +132,7 @@ namespace Tools
 
 		shape->SetShape(verticies, normals, indicies);
 		shape->SetTextureCords(textureCordinates);
+		shape->MakeVAO();
 
 		
 		return shape;

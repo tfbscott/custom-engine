@@ -17,14 +17,9 @@
 #include "InputDevice.h"
 
 #include "LevelA.h"
-#include "LevelB.h"
-#include "LevelT.h"
-#include "LevelZ.h"
 
 int main(void)
 {
-    
-
 	Engine::Core core;
 
 	Engine::Renderer renderer;
@@ -85,17 +80,10 @@ int main(void)
 
 
     Gamestate::LevelA* gsa = new Gamestate::LevelA;
-    Gamestate::LevelB* gsb = new Gamestate::LevelB;
-    //TEST LEVEL
-    Gamestate::LevelT* gst = new Gamestate::LevelT;
-
-    Gamestate::LevelZ* gsz = new Gamestate::LevelZ;
     //THESE ARE AUTO DELETED
 
     //core.AddGameState(gst);
     core.AddGameState(gsa);
-    core.AddGameState(gsb);
-    core.AddGameState(gsz);
    
     core.StateManager->SetNextGameState(0);
 

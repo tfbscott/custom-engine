@@ -13,127 +13,10 @@
 
 namespace Gamestate
 {
-	void LevelA::ReadLevel(const char* s)
-	{
-		std::fstream file(s);
-
-		//Get the width of the level
-		int width;
-		file >> width;
-
-		//Alright so, in terms of reading in the level
-		//Top left will be treated as 0, 0, 0
-
-		std::string line;
-		while (std::getline(file, line))
-		{
-			for (int i = 0; i < width; i++)
-			{
-				//uuuugh my head hurts
-			}
-		}
-	}
-
 	void LevelA::Load() 
 	{
 		//This is the verticies and indicies for a cube
 		const float cubehalf = 0.5f;
-		std::vector<glm::vec3> cv, cn;
-		//FRONT
-		cv.push_back(glm::vec3(cubehalf, cubehalf, cubehalf));	//TR
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, cubehalf));	//TL
-		cv.push_back(glm::vec3(cubehalf, -cubehalf, cubehalf));	//BR
-		cv.push_back(glm::vec3(-cubehalf, -cubehalf, cubehalf));//BL
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(0, 0, 1));
-		//RIGHT
-		cv.push_back(glm::vec3(cubehalf, cubehalf, -cubehalf));	//TR
-		cv.push_back(glm::vec3(cubehalf, cubehalf, cubehalf));	//TL
-		cv.push_back(glm::vec3(cubehalf, -cubehalf, -cubehalf));//BR
-		cv.push_back(glm::vec3(cubehalf, -cubehalf, cubehalf));	//BL
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(1, 0, 0));
-		//BACK
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, -cubehalf));	//TL
-		cv.push_back(glm::vec3(cubehalf, cubehalf, -cubehalf));	//TR
-		cv.push_back(glm::vec3(-cubehalf, -cubehalf, -cubehalf));//BL
-		cv.push_back(glm::vec3(cubehalf, -cubehalf, -cubehalf));	//BR
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(0, 0, -1));
-		//LEFT
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, cubehalf));	//TL
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, -cubehalf));	//TR
-		cv.push_back(glm::vec3(-cubehalf, -cubehalf, cubehalf));	//BL
-		cv.push_back(glm::vec3(-cubehalf, -cubehalf, -cubehalf));//BR
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(-1, 0, 0));
-		//TOP
-		cv.push_back(glm::vec3(cubehalf, cubehalf, -cubehalf));	//TR
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, -cubehalf));	//TL
-		cv.push_back(glm::vec3(cubehalf, cubehalf, cubehalf));	//BR
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, cubehalf));//BL
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(0, 1, 0));
-		//BOTTOM
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, -cubehalf));	//TL
-		cv.push_back(glm::vec3(cubehalf, cubehalf, -cubehalf));	//TR
-		cv.push_back(glm::vec3(-cubehalf, cubehalf, cubehalf));//BL
-		cv.push_back(glm::vec3(cubehalf, cubehalf, cubehalf));	//BR
-		for (int i = 0; i < 4; i++)
-			cn.push_back(glm::vec3(0, -1, 0));
-		
-
-		std::vector<glm::ivec3> ci;
-		//FRONT
-		ci.push_back(glm::ivec3(0, 1, 2));
-		ci.push_back(glm::ivec3(1, 3, 2)); 
-		//RIGHT
-		ci.push_back(glm::ivec3(4, 5, 6));
-		ci.push_back(glm::ivec3(5, 7, 6));
-		//BACK
-		ci.push_back(glm::ivec3(8, 9, 10));
-		ci.push_back(glm::ivec3(9, 11, 10));
-		//LEFT
-		ci.push_back(glm::ivec3(12, 13, 14));
-		ci.push_back(glm::ivec3(13, 15, 14));
-		//TOP
-		ci.push_back(glm::ivec3(16, 17, 18));
-		ci.push_back(glm::ivec3(17, 19, 18));
-		//BOTTOM
-		ci.push_back(glm::ivec3(20, 21, 22));
-		ci.push_back(glm::ivec3(21, 23, 22));
-
-		std::vector<glm::vec2> ct;
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-
-		ct.push_back(glm::vec2(1, 1));
-		ct.push_back(glm::vec2(0, 1));
-		ct.push_back(glm::vec2(1, 0));
-		ct.push_back(glm::vec2(0, 0));
-		
 		
 
 		std::vector<glm::vec3> sv, sn;
@@ -148,24 +31,14 @@ namespace Gamestate
 		si.push_back(glm::ivec3(0, 1, 3));
 		si.push_back(glm::ivec3(1, 2, 3));
 
-		box = Tools::ReadShape("Cube.txt");// new Component::Shape;
+		box = Tools::ReadShape("Assets/Generic/Cube_3D.txt");// new Component::Shape;
 
-		
-		//box->SetVerticies(vertices, 36, 5);
-		box->SetShape(cv, cn, ci);
-		box->SetTextureCords(ct);
-		
-		box->MakeVAO();
-
-		square = new Component::Shape;
-		square->SetShape(sv, sn, si);
-		square->MakeVAO();
+		square = Tools::ReadShape("Assets/Generic/Square_2D.txt");//new Component::Shape;
 
 		texA = new Component::Texture;
 		texA->Read("man.jpg", true);
 
 
-		//OKAY LETS DO SOMETHING STUPID
 		int maxi = 1;
 		int maxj = 2;
 

@@ -36,15 +36,6 @@
     <ClCompile Include="ProjectileBehavior.cpp">
       <Filter>Behaviors</Filter>
     </ClCompile>
-    <ClCompile Include="LevelB.cpp">
-      <Filter>Levels</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelZ.cpp">
-      <Filter>Levels</Filter>
-    </ClCompile>
-    <ClCompile Include="LevelT.cpp">
-      <Filter>Levels</Filter>
-    </ClCompile>
     <ClCompile Include="ShrinkandKill.cpp">
       <Filter>Behaviors</Filter>
     </ClCompile>
@@ -61,15 +52,6 @@
     </ClInclude>
     <ClInclude Include="ProjectileBehavior.h">
       <Filter>Behaviors</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelB.h">
-      <Filter>Levels</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelZ.h">
-      <Filter>Levels</Filter>
-    </ClInclude>
-    <ClInclude Include="LevelT.h">
-      <Filter>Levels</Filter>
     </ClInclude>
     <ClInclude Include="ShrinkAndKill.h">
       <Filter>Behaviors</Filter>
