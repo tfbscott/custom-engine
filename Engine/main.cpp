@@ -17,6 +17,7 @@
 #include "InputDevice.h"
 
 #include "LevelA.h"
+#include "Level2DTest.h"
 
 int main(void)
 {
@@ -80,12 +81,14 @@ int main(void)
 
 
     Gamestate::LevelA* gsa = new Gamestate::LevelA;
+    Gamestate::Level2DTest* gs2D = new Gamestate::Level2DTest;
     //THESE ARE AUTO DELETED
 
     //core.AddGameState(gst);
     core.AddGameState(gsa);
+    core.AddGameState(gs2D);
    
-    core.StateManager->SetNextGameState(0);
+    core.StateManager->SetNextGameState(1);
 
 	core.Run();
 

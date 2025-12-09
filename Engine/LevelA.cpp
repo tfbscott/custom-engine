@@ -6,7 +6,7 @@
 #include "Camera.h"
 #include "Shape.h"
 #include "Texture.h"
-#include "PlayerBehavior.h"
+#include "ShooterPlayerBehavior.h"
 #include "ReadWriteTools.h"
 
 #include <fstream>
@@ -17,19 +17,6 @@ namespace Gamestate
 	{
 		//This is the verticies and indicies for a cube
 		const float cubehalf = 0.5f;
-		
-
-		std::vector<glm::vec3> sv, sn;
-		sv.push_back(glm::vec3(cubehalf, cubehalf, 0.0f));
-		sv.push_back(glm::vec3(cubehalf, -cubehalf, 0.0f));
-		sv.push_back(glm::vec3(-cubehalf, -cubehalf, 0.0f));
-		sv.push_back(glm::vec3(-cubehalf, cubehalf, 0.0f));
-		for (int i = 0; i < 4; i++)
-			sn.push_back(glm::vec3(0, 0, 1));
-
-		std::vector<glm::ivec3> si;
-		si.push_back(glm::ivec3(0, 1, 3));
-		si.push_back(glm::ivec3(1, 2, 3));
 
 		box = Tools::ReadShape("Assets/Generic/Cube_3D.txt");// new Component::Shape;
 
@@ -38,10 +25,8 @@ namespace Gamestate
 		texA = new Component::Texture;
 		texA->Read("man.jpg", true);
 
-
 		int maxi = 1;
 		int maxj = 2;
-
 		
 		startingPos.push_back(glm::vec3(15.0f, 2.0f, 15.0));
 		startingPos.push_back(glm::vec3(-15.0f, 2.0f, 15.0));
@@ -74,7 +59,7 @@ namespace Gamestate
 
 				Component::Kinematics* pphys = CreateComponent<Component::Kinematics>(playerA);
 
-				Component::PlayerBehavior* pbeh = CreateComponent<Component::PlayerBehavior>(playerA);
+				Component::ShooterPlayerBehavior* pbeh = CreateComponent<Component::ShooterPlayerBehavior>(playerA);
 
 				Component::RenderComponent* mesh = CreateComponent<Component::RenderComponent>(playerA);
 				mesh->SetShape(box);

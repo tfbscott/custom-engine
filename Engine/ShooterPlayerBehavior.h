@@ -12,7 +12,7 @@ namespace Component
 
 	class Shape;
 
-	class PlayerBehavior : public SimpleBehavior
+	class ShooterPlayerBehavior : public SimpleBehavior
 	{
 	public:
 		virtual void OnStart();

@@ -1,4 +1,4 @@
-#include "PlayerBehavior.h"
+#include "ShooterPlayerBehavior.h"
 #include "GameObject.h"
 #include "Kinematics.h"
 #include "Transform.h"
@@ -21,7 +21,7 @@ namespace Component
 {
 
 
-	void PlayerBehavior::OnStart()
+	void ShooterPlayerBehavior::OnStart()
 	{
 		phys = parent->GetComponent<Component::Kinematics>();
 		tran = parent->GetComponent<Transform>();
@@ -37,23 +37,23 @@ namespace Component
 		movement = glm::vec3(0.0f, 0.0f, 0.0f);
 		startingScale = tran->GetScale();
 
-		BindKeyAction("Walk_Y", this, &PlayerBehavior::WalkY);
-		BindKeyAction("Walk_X", this, &PlayerBehavior::WalkX);
+		BindKeyAction("Walk_Y", this, &ShooterPlayerBehavior::WalkY);
+		BindKeyAction("Walk_X", this, &ShooterPlayerBehavior::WalkX);
 		//These exist until custom axes work
-		BindKeyAction("Walk_For", this, &PlayerBehavior::WalkFor);
-		BindKeyAction("Walk_Back", this, &PlayerBehavior::WalkBack);
-		BindKeyAction("Walk_Left", this, &PlayerBehavior::WalkLeft);
-		BindKeyAction("Walk_Right", this, &PlayerBehavior::WalkRight);
+		BindKeyAction("Walk_For", this, &ShooterPlayerBehavior::WalkFor);
+		BindKeyAction("Walk_Back", this, &ShooterPlayerBehavior::WalkBack);
+		BindKeyAction("Walk_Left", this, &ShooterPlayerBehavior::WalkLeft);
+		BindKeyAction("Walk_Right", this, &ShooterPlayerBehavior::WalkRight);
 
-		BindKeyAction("Jump", this, &PlayerBehavior::Jump);
+		BindKeyAction("Jump", this, &ShooterPlayerBehavior::Jump);
 
-		BindKeyAction("Camera_X", this, &PlayerBehavior::CameraX);
-		BindKeyAction("Camera_Y", this, &PlayerBehavior::CameraY);
+		BindKeyAction("Camera_X", this, &ShooterPlayerBehavior::CameraX);
+		BindKeyAction("Camera_Y", this, &ShooterPlayerBehavior::CameraY);
 
-		BindKeyAction("Shoot", this, &PlayerBehavior::Shoot);
+		BindKeyAction("Shoot", this, &ShooterPlayerBehavior::Shoot);
 	}
 
-	void PlayerBehavior::OnUpdate(float dt)
+	void ShooterPlayerBehavior::OnUpdate(float dt)
 	{
 		glm::vec3 forward = cam->GetCameraFront();
 		glm::vec3 right = glm::cross(cam->GetCameraFront(), glm::vec3(0, 1.0f, 0));
@@ -120,13 +120,13 @@ namespace Component
 		}
 	}
 
-	void PlayerBehavior::OnCollision(Object::GameObject* me, Object::GameObject* them)
+	void ShooterPlayerBehavior::OnCollision(Object::GameObject* me, Object::GameObject* them)
 	{
 		//std::cout << "Working Collision Events" << std::endl;
 		
 	}
 
-	bool PlayerBehavior::Jump(int index, float val)
+	bool ShooterPlayerBehavior::Jump(int index, float val)
 	{
 		if ((index == PlayerIndex) && onGround && !isDead)
 		{
@@ -139,7 +139,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::WalkY(int index, float val)
+	bool ShooterPlayerBehavior::WalkY(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -150,7 +150,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::WalkX(int index, float val)
+	bool ShooterPlayerBehavior::WalkX(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -161,7 +161,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::WalkFor(int index, float val)
+	bool ShooterPlayerBehavior::WalkFor(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -171,7 +171,7 @@ namespace Component
 
 		return false;
 	}
-	bool PlayerBehavior::WalkBack(int index, float val)
+	bool ShooterPlayerBehavior::WalkBack(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -181,7 +181,7 @@ namespace Component
 
 		return false;
 	}
-	bool PlayerBehavior::WalkLeft(int index, float val)
+	bool ShooterPlayerBehavior::WalkLeft(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -191,7 +191,7 @@ namespace Component
 
 		return false;
 	}
-	bool PlayerBehavior::WalkRight(int index, float val)
+	bool ShooterPlayerBehavior::WalkRight(int index, float val)
 	{
 		if (index == PlayerIndex)
 			if (abs(val) > DEADZONE)
@@ -202,7 +202,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::CameraX(int index, float val)
+	bool ShooterPlayerBehavior::CameraX(int index, float val)
 	{
 
 		float offset = -val * MOUSE_SEN;
@@ -215,7 +215,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::CameraY(int index, float val)
+	bool ShooterPlayerBehavior::CameraY(int index, float val)
 	{
 		float offset = (val) * MOUSE_SEN;
 		if (abs(offset) < DEADZONE)
@@ -227,7 +227,7 @@ namespace Component
 		return false;
 	}
 
-	bool PlayerBehavior::Shoot(int index, float val)
+	bool ShooterPlayerBehavior::Shoot(int index, float val)
 	{
 		if (index == PlayerIndex && val == 1)
 			RaycastShoot();
@@ -235,7 +235,7 @@ namespace Component
 		return false;
 	}
 
-	void PlayerBehavior::ThrowDisk(float speed, float x, float y)
+	void ShooterPlayerBehavior::ThrowDisk(float speed, float x, float y)
 	{
 		glm::vec3 forward = cam->GetCameraFront();
 		glm::vec3 right = glm::cross(cam->GetCameraFront(), glm::vec3(0, 1.0f, 0));
@@ -268,7 +268,7 @@ namespace Component
 		pcol->SetBoundingBox(scale / 2.0f);
 	}
 
-	void PlayerBehavior::RaycastShoot()
+	void ShooterPlayerBehavior::RaycastShoot()
 	{
 		glm::vec3 forward = cam->GetCameraFront();
 		const float dist = 100.0f;
@@ -289,8 +289,8 @@ namespace Component
 			//If we hit something
 			if (hit.GameObject->GetIdentifier() == "Player")
 			{
-				std::cout << "Player " << PlayerIndex << " killed Player " << hit.GameObject->GetComponent<PlayerBehavior>()->PlayerIndex << std::endl;
-				hit.GameObject->GetComponent<PlayerBehavior>()->Kill();
+				std::cout << "Player " << PlayerIndex << " killed Player " << hit.GameObject->GetComponent<ShooterPlayerBehavior>()->PlayerIndex << std::endl;
+				hit.GameObject->GetComponent<ShooterPlayerBehavior>()->Kill();
 			}
 			else
 				std::cout << "Player " << PlayerIndex << " hit the " << hit.GameObject->GetIdentifier() << std::endl;
@@ -300,7 +300,7 @@ namespace Component
 		}
 	}
 	
-	bool PlayerBehavior::CheckGround()
+	bool ShooterPlayerBehavior::CheckGround()
 	{
 		glm::vec3 start = tran->GetPosition() - glm::vec3(0, 1.5f, 0);
 
@@ -315,13 +315,13 @@ namespace Component
 		return colSys->PerfromRayCast(start, glm::vec3(0, -0.01f, 0), hit, rdata);
 	}
 
-	void PlayerBehavior::Kill()
+	void ShooterPlayerBehavior::Kill()
 	{
 		isDead = true;
 		parent->GetComponent<RenderComponent>()->SetColor(glm::vec3(1.0f, 0.0f, 0.0f));
 	}
 
-	void PlayerBehavior::SpawnHitMarker(const glm::vec3& position)
+	void ShooterPlayerBehavior::SpawnHitMarker(const glm::vec3& position)
 	{
 		Engine::ECSFactory* factory = GetParent()->GetCore()->Factory;
 		Object::GameObject* proj = factory->CreateGameObject();
@@ -337,7 +337,7 @@ namespace Component
 	}
 
 
-	void PlayerBehavior::Respawn()
+	void ShooterPlayerBehavior::Respawn()
 	{
 		tran->SetScale(startingScale);
 		isDead = false;

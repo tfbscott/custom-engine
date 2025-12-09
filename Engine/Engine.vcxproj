@@ -167,16 +167,20 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Level2DTest.cpp" />
     <ClCompile Include="LevelA.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PlayerBehavior.cpp" />
+    <ClCompile Include="MetroidVaniaPlayerBehavior.cpp" />
+    <ClCompile Include="ShooterPlayerBehavior.cpp" />
     <ClCompile Include="ProjectileBehavior.cpp" />
     <ClCompile Include="ShrinkandKill.cpp" />
     <ClCompile Include="ReadWriteTools.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Level2DTest.h" />
     <ClInclude Include="LevelA.h" />
-    <ClInclude Include="PlayerBehavior.h" />
+    <ClInclude Include="MetroidVaniaPlayerBehavior.h" />
+    <ClInclude Include="ShooterPlayerBehavior.h" />
     <ClInclude Include="ProjectileBehavior.h" />
     <ClInclude Include="ReadWriteTools.h" />
     <ClInclude Include="ShrinkAndKill.h" />

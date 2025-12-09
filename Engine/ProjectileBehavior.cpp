@@ -2,7 +2,7 @@
 
 #include "Kinematics.h"
 #include "Transform.h"
-#include "PlayerBehavior.h"
+#include "ShooterPlayerBehavior.h"
 
 #include "GameStateManager.h"
 
@@ -35,7 +35,7 @@ namespace Component
 				thrower->GetComponent<Transform>()->SetPosition(GetParent()->GetComponent<Transform>()->GetPosition());
 
 				//This is a sketchy way to prevent multiple disks
-				thrower->GetComponent<PlayerBehavior>()->canFire = true;
+				thrower->GetComponent<ShooterPlayerBehavior>()->canFire = true;
 			}
 
 		}

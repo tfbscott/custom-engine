@@ -30,7 +30,7 @@
     <ClCompile Include="LevelA.cpp">
       <Filter>Levels</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerBehavior.cpp">
+    <ClCompile Include="ShooterPlayerBehavior.cpp">
       <Filter>Behaviors</Filter>
     </ClCompile>
     <ClCompile Include="ProjectileBehavior.cpp">
@@ -42,12 +42,18 @@
     <ClCompile Include="ReadWriteTools.cpp">
       <Filter>Tools</Filter>
     </ClCompile>
+    <ClCompile Include="Level2DTest.cpp">
+      <Filter>Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="MetroidVaniaPlayerBehavior.cpp">
+      <Filter>Behaviors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelA.h">
       <Filter>Levels</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerBehavior.h">
+    <ClInclude Include="ShooterPlayerBehavior.h">
       <Filter>Behaviors</Filter>
     </ClInclude>
     <ClInclude Include="ProjectileBehavior.h">
@@ -58,6 +64,12 @@
     </ClInclude>
     <ClInclude Include="ReadWriteTools.h">
       <Filter>Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="Level2DTest.h">
+      <Filter>Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="MetroidVaniaPlayerBehavior.h">
+      <Filter>Behaviors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
