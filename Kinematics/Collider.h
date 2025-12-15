@@ -47,7 +47,6 @@ namespace Component
 
 		void Update(float);
 
-		bool CheckAgainst(const Collider* other);
 		/*
 		other | The static box we are colliding against [WE ARE ALSO STATIC]
 		hit | if intersection, the values of hit are filled in with the hit result

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31624.102
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj", "{4B1366E6-85A5-4447-920F-C18CAD4EB6E4}"
 EndProject
@@ -9,7 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcx
 	ProjectSection(ProjectDependencies) = postProject
 		{058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF} = {058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF}
 		{C3A36473-B554-40FA-97C1-6EECCA758AB7} = {C3A36473-B554-40FA-97C1-6EECCA758AB7}
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21} = {B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}
 		{4B1366E6-85A5-4447-920F-C18CAD4EB6E4} = {4B1366E6-85A5-4447-920F-C18CAD4EB6E4}
 	EndProjectSection
 EndProject
@@ -19,11 +18,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderOpenGL", "RenderOpenG
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Kinematics", "Kinematics\Kinematics.vcxproj", "{058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF}"
-	ProjectSection(ProjectDependencies) = postProject
-		{4B1366E6-85A5-4447-920F-C18CAD4EB6E4} = {4B1366E6-85A5-4447-920F-C18CAD4EB6E4}
-	EndProjectSection
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleBehavior", "SimpleBehavior\SimpleBehavior.vcxproj", "{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4B1366E6-85A5-4447-920F-C18CAD4EB6E4} = {4B1366E6-85A5-4447-920F-C18CAD4EB6E4}
 	EndProjectSection
@@ -68,14 +62,6 @@ Global
 		{058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF}.Release|x64.Build.0 = Release|x64
 		{058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF}.Release|x86.ActiveCfg = Release|Win32
 		{058F3D2E-1B72-4BE3-B4DE-8B6EF0DEA3FF}.Release|x86.Build.0 = Release|Win32
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Debug|x64.ActiveCfg = Debug|x64
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Debug|x64.Build.0 = Debug|x64
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Debug|x86.ActiveCfg = Debug|Win32
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Debug|x86.Build.0 = Debug|Win32
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Release|x64.ActiveCfg = Release|x64
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Release|x64.Build.0 = Release|x64
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Release|x86.ActiveCfg = Release|Win32
-		{B9CBAED5-BCF4-48D4-8DC7-D3822FB18E21}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

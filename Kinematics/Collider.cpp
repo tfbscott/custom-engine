@@ -27,24 +27,6 @@ namespace Component
 
 	}
 
-	bool Collider::CheckAgainst(const Collider* other)
-	{
-		Transform* ta = GetParent()->GetComponent<Transform>();
-		Kinematics* ka = GetParent()->GetComponent<Kinematics>();
-		Transform* tb = other->parent->GetComponent<Transform>();
-		Kinematics* kb = other->parent->GetComponent<Kinematics>();
-
-		glm::vec3 minA = ta->GetPosition() /*+ ka->GetVelocity()*/ - half_;
-		glm::vec3 maxA = ta->GetPosition() /*+ ka->GetVelocity()*/ + half_;
-		glm::vec3 minB = tb->GetPosition() /*+ kb->GetVelocity()*/ - other->half_;
-		glm::vec3 maxB = tb->GetPosition() /*+ kb->GetVelocity()*/ + other->half_;
-
-		return (minA.x <= maxB.x && maxA.x >= minB.x) &&
-			(minA.y <= maxB.y && maxA.y >= minB.y) &&
-			(minA.z <= maxB.z && maxA.z >= minB.y);
-	}
-
-
 	bool Collider::IntersectAABB(const Collider* other, Hit& hit)
 	{
 		Transform* ta = GetParent()->GetComponent<Transform>();

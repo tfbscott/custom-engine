@@ -46,6 +46,7 @@ namespace Gamestate {
 		Component::Collider* floorCollider = CreateComponent<Component::Collider>(floor);
 		floorTransform->SetPosition(glm::vec3(0, -2, 0));
 		floorCollider->SetBoundingBox(glm::vec3(20, 1, 1));
+		floorCollider->SetStatic(true);
 	}
 
 	void Level2DTest::Init()

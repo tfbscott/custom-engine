@@ -22,6 +22,9 @@
     <Filter Include="Tools">
       <UniqueIdentifier>{d402ccfa-daaa-4896-b2d5-619e464cb5fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Systems">
+      <UniqueIdentifier>{bf6e5b15-6a9f-432e-bbf6-1f3506ccfc9a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -48,6 +51,12 @@
     <ClCompile Include="MetroidVaniaPlayerBehavior.cpp">
       <Filter>Behaviors</Filter>
     </ClCompile>
+    <ClCompile Include="..\SimpleBehavior\SimpleBehavior.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SimpleBehavior\SimpleBehaviorSystem.cpp">
+      <Filter>Systems</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LevelA.h">
@@ -70,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="MetroidVaniaPlayerBehavior.h">
       <Filter>Behaviors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SimpleBehavior\SimpleBehavior.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SimpleBehavior\SimpleBehaviorSystem.h">
+      <Filter>Systems</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

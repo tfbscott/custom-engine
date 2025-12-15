@@ -167,6 +167,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\SimpleBehavior\SimpleBehavior.cpp" />
+    <ClCompile Include="..\SimpleBehavior\SimpleBehaviorSystem.cpp" />
     <ClCompile Include="Level2DTest.cpp" />
     <ClCompile Include="LevelA.cpp" />
     <ClCompile Include="main.cpp" />
@@ -177,6 +179,8 @@
     <ClCompile Include="ReadWriteTools.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\SimpleBehavior\SimpleBehavior.h" />
+    <ClInclude Include="..\SimpleBehavior\SimpleBehaviorSystem.h" />
     <ClInclude Include="Level2DTest.h" />
     <ClInclude Include="LevelA.h" />
     <ClInclude Include="MetroidVaniaPlayerBehavior.h" />
@@ -194,9 +198,6 @@
     </ProjectReference>
     <ProjectReference Include="..\RenderOpenGL\RenderOpenGL.vcxproj">
       <Project>{c3a36473-b554-40fa-97c1-6eecca758ab7}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\SimpleBehavior\SimpleBehavior.vcxproj">
-      <Project>{b9cbaed5-bcf4-48d4-8dc7-d3822fb18e21}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
